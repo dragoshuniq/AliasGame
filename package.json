@@ -1,0 +1,56 @@
+{
+  "name": "Aliasapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "splash": "react-native generate-bootsplash assets/logo.png  --background-color=F5F5F5  --logo-width=150  --assets-path=assets  --flavor=main",
+    "clean:android": "cd android && ./gradlew clean && cd ../",
+    "clean:ios": "cd ios && xcodebuild clean && cd ../",
+    "clean:cache": "react-native start --reset-cache",
+    "build:android": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && ./gradlew assembleDebug && cd ../"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.16.1",
+    "@react-native-picker/picker": "^2.3.0",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/stack": "^6.1.1",
+    "@redux-devtools/extension": "^3.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "i18next": "^21.6.11",
+    "lodash": "^4.17.21",
+    "react": "17.0.2",
+    "react-i18next": "^11.15.5",
+    "react-native": "0.67.4",
+    "react-native-animatable": "^1.3.3",
+    "react-native-bootsplash": "^4.1.3",
+    "react-native-elements": "^3.4.2",
+    "react-native-gesture-handler": "^2.2.0",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-modal": "^13.0.0",
+    "react-native-reanimated": "^2.4.1",
+    "react-native-safe-area-context": "^3.4.1",
+    "react-native-screens": "^3.12.0",
+    "react-native-vector-icons": "^9.1.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-saga": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/runtime": "^7.17.8",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.11.0",
+    "jest": "^27.5.1",
+    "metro-react-native-babel-preset": "^0.69.1",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
